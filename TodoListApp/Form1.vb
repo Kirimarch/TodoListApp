@@ -205,4 +205,13 @@ Public Class Form1
             End Try
         End Using
     End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim confirm = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If confirm = DialogResult.Yes Then
+            loggedInUser = ""
+            Me.Close()
+            FormLogin.Show()
+        End If
+    End Sub
 End Class

@@ -32,6 +32,7 @@ Partial Class Form1
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnDone = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -87,7 +88,7 @@ Partial Class Form1
         '
         Me.btnAdd.BackColor = System.Drawing.Color.White
         Me.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Location = New System.Drawing.Point(477, 325)
         Me.btnAdd.Name = "btnAdd"
@@ -124,11 +125,25 @@ Partial Class Form1
         Me.btnDone.Text = "Done"
         Me.btnDone.UseVisualStyleBackColor = True
         '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.LightCoral
+        Me.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.Location = New System.Drawing.Point(12, 454)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(113, 37)
+        Me.btnLogout.TabIndex = 9
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(597, 499)
+        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.btnDone)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnEdit)
@@ -156,4 +171,5 @@ Partial Class Form1
     Friend WithEvents btnEdit As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnDone As Button
+    Friend WithEvents btnLogout As Button
 End Class

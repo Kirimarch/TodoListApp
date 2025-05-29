@@ -28,8 +28,12 @@ Public Class FormLogin
                         Me.Hide()
                         Form1.loggedInUser = username
                         Form1.Show()
+                        txtUsername.Clear()
+                        txtPassword.Clear()
                     Else
                         MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtUsername.Clear()
+                        txtPassword.Clear()
                     End If
                 End Using
             Catch ex As Exception
