@@ -205,6 +205,19 @@ Public Class Form1
             End Try
         End Using
     End Sub
+    Private Sub dgvTasks_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvTasks.CellFormatting
+        If dgvTasks.Columns(e.ColumnIndex).Name = "Status" AndAlso e.Value IsNot Nothing Then
+            Dim statusText As String = e.Value.ToString().ToLower()
+
+            If statusText = "done" Then
+                e.CellStyle.ForeColor = Color.Green
+                e.CellStyle.Font = New Font(dgvTasks.Font, FontStyle.Bold)
+            ElseIf statusText = "unfinished" Then
+                e.CellStyle.ForeColor = Color.Red
+                e.CellStyle.Font = New Font(dgvTasks.Font, FontStyle.Bold)
+            End If
+        End If
+    End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Dim confirm = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
