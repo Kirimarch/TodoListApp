@@ -58,4 +58,15 @@ Public Class FormRegister
         FormLogin.Show()
         Me.Close()
     End Sub
+
+    Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+        Dim showPassword As Boolean = Not chkShowPassword.Checked
+        txtPassword.UseSystemPasswordChar = showPassword
+        txtConfirm.UseSystemPasswordChar = showPassword
+    End Sub
+
+    Private Sub FormRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.UseSystemPasswordChar = True
+        txtConfirm.UseSystemPasswordChar = True
+    End Sub
 End Class

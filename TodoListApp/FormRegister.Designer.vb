@@ -22,6 +22,7 @@ Partial Class FormRegister
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegister))
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
@@ -31,6 +32,7 @@ Partial Class FormRegister
         Me.txtConfirm = New System.Windows.Forms.TextBox()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.lnkLogin = New System.Windows.Forms.LinkLabel()
+        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -123,11 +125,22 @@ Partial Class FormRegister
         Me.lnkLogin.TabStop = True
         Me.lnkLogin.Text = "Back to Login"
         '
+        'chkShowPassword
+        '
+        Me.chkShowPassword.AutoSize = True
+        Me.chkShowPassword.Location = New System.Drawing.Point(324, 242)
+        Me.chkShowPassword.Name = "chkShowPassword"
+        Me.chkShowPassword.Size = New System.Drawing.Size(122, 20)
+        Me.chkShowPassword.TabIndex = 9
+        Me.chkShowPassword.Text = "show password"
+        Me.chkShowPassword.UseVisualStyleBackColor = True
+        '
         'FormRegister
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(449, 424)
+        Me.Controls.Add(Me.chkShowPassword)
         Me.Controls.Add(Me.lnkLogin)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.txtConfirm)
@@ -137,6 +150,7 @@ Partial Class FormRegister
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.lblTitle)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormRegister"
         Me.Text = "Register"
         Me.ResumeLayout(False)
@@ -153,4 +167,5 @@ Partial Class FormRegister
     Friend WithEvents txtConfirm As TextBox
     Friend WithEvents btnRegister As Button
     Friend WithEvents lnkLogin As LinkLabel
+    Friend WithEvents chkShowPassword As CheckBox
 End Class
